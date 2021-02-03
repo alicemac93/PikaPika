@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Hollow";
+    src: url(./fonts/Pokemon-Hollow.woff) format("woff");
+}
+@font-face {
+    font-family: "Solid";
+    src: url(./fonts/Pokemon-Solid.woff) format("woff");
+}
+@font-face {
+    font-family: "Roboto-reg";
+    src: url(./fonts/Roboto-Regular.woff) format("woff");
+}
+
+* {
+    padding: 0;
+    margin: 0
+}
+
+body {
+    background-color: #ecf0f1;
+    font-family: "Roboto-reg";
+}
+header {
+    min-height: 800px;
+    background-image: url(./images/bg_desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom, right -20px;
+}
+h2 {
+    text-transform: uppercase;
+    font-family: "Hollow";
+}
+ul {
+    padding: 3% 5%;
+    position: relative;
+}
+
+ul:first-child::after{
+    content: "";
+    border-right: 1px solid ecf0f1;
+    height: 80px;
+    position: absolute;
+    right: -10px;
+    top: 10px;
+}
+
+li {
+    list-style-type: none;
+    line-height: 1.2;
+}
+
+p {
+    padding-bottom: 8px;
+    font-family: "Solid";
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 12.5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.card:hover .bottomCard {
+    display: inline-flex;
+
+  }
+
+.bottomCard{
+    display: none;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 700px){
+    header{
+        background-image: url(./images/bg_mobile.jpg);
+    }
+    .bottomCard{
+        display:  inline-flex;
+}}
